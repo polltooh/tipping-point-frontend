@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  /* Proposed Design Tokens from FRONTEND_DESIGN.md Section 3.1 */
+  --catalyst-canvas: #FFFFFF;
+  --catalyst-surface: #F5F5F4;
+  --catalyst-surface-raised: #FFFFFF;
+  --catalyst-text: #171717;
+  --catalyst-text-secondary: #626262;
+  --catalyst-border: #DEDEDC;
+  --catalyst-action: #171717;
+  --catalyst-positive: #356B2B;
+  --catalyst-positive-bg: #E8F1E6;
+  --catalyst-negative: #B4233A;
+  --catalyst-negative-bg: #FCE8EC;
+  --catalyst-warning: #8A5700;
+  --catalyst-warning-bg: #FEF3C7;
+  --catalyst-focus: #2563EB;
+  --catalyst-radius-control: 8px;
+  --catalyst-radius-card: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--catalyst-canvas);
+  color: var(--catalyst-text);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 16px Dot Grid Canvas from FRONTEND_DESIGN.md Section 8.2 */
+.catalyst-dot-grid {
+  background-color: #FAF9F6;
+  background-image: radial-gradient(#D4D4D0 1.25px, transparent 1.25px);
+  background-size: 16px 16px;
+}
+
+/* Keyboard focus ring */
+.catalyst-focus-ring:focus-visible {
+  outline: 2px solid var(--catalyst-focus);
+  outline-offset: 2px;
+}
+
+/* Prevent iOS Safari & mobile browsers from auto-zooming when focusing inputs (<16px triggers WebKit zoom) */
+@media screen and (max-width: 767px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Smooth continuous rolling news marquee for the main page */
+@keyframes catalyst-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.catalyst-news-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: catalyst-marquee 48s linear infinite;
+}
+
+.catalyst-news-marquee-track:hover,
+.catalyst-news-marquee-track:focus-within {
+  animation-play-state: paused;
+}

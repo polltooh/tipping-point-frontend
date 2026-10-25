@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#181A20"/>
+  <!-- Top chevron -->
+  <polygon points="32,12 43,23 38.2,27.8 32,21.6 25.8,27.8 21,23" fill="#F0B90B"/>
+  <!-- Bottom chevron -->
+  <polygon points="32,52 21,41 25.8,36.2 32,42.4 38.2,36.2 43,41" fill="#F0B90B"/>
+  <!-- Left diamond -->
+  <polygon points="16.2,27.2 21,32 16.2,36.8 11.4,32" fill="#F0B90B"/>
+  <!-- Right diamond -->
+  <polygon points="47.8,27.2 52.6,32 47.8,36.8 43,32" fill="#F0B90B"/>
+  <!-- Center diamond -->
+  <polygon points="32,26.2 37.8,32 32,37.8 26.2,32" fill="#F0B90B"/>
+</svg>

@@ -818,7 +818,7 @@ export function TippingPointWorkspaceShell() {
                     <div className="w-full max-w-[680px]">
                       {/* Simple, Calm Headline */}
                       <h1 className="text-center text-[28px] font-semibold tracking-tight text-[#171717] sm:text-[32px]">
-                        What would you like to trade or monitor?
+                        Every trade starts with a tipping point.
                       </h1>
 
                       {/* Centered ChatGPT-Style Composer Box */}
